@@ -1,0 +1,14 @@
+extends layout
+block append head
+  title 记账
+  link(type="text/css",rel="stylesheet",href="/css/cost.css")
+
+block append content
+  include ../client/modules/headbar/index
+  ul.costs
+    for item in costs
+      li.item
+        a(href="/done/" + item.cost)= item.cost
+
+block append footer
+  script(type='text/javascript',src="/js/cost/main.js")

@@ -1,0 +1,14 @@
+extends layout
+block append head
+  title 记账
+  link(type="text/css",rel="stylesheet",href="/css/category.css")
+
+block append content
+  include ../client/modules/headbar/index
+  ul.categories
+    for item in categories
+      li.item
+        a(href="/cost/" + item.category)= item.category
+
+block append footer
+  script(type='text/javascript',src="/js/category/main.js")

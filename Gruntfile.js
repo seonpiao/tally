@@ -15,16 +15,24 @@ module.exports = function(grunt) {
         src: ['client/stylus/login/main.styl'],
         dest: 'dist/css/login.css'
       },
-      add: {
-        src: ['client/stylus/add/main.styl'],
-        dest: 'dist/css/add.css'
+      category: {
+        src: ['client/stylus/category/main.styl'],
+        dest: 'dist/css/category.css'
+      },
+      cost: {
+        src: ['client/stylus/cost/main.styl'],
+        dest: 'dist/css/cost.css'
+      },
+      list: {
+        src: ['client/stylus/list/main.styl'],
+        dest: 'dist/css/list.css'
       }
     },
 
     cssmin: {
       compress: {
         files: {
-          'dist/css/add.min.css': ['dist/css/add.css'],
+          // 'dist/css/add.min.css': ['dist/css/add.css'],
           // 'dist/css/user.min.css': ['dist/css/user.css'],
           // 'dist/css/detail.min.css': ['dist/css/detail.css'],
           // 'dist/css/post.min.css': ['dist/css/post.css']
@@ -160,16 +168,40 @@ module.exports = function(grunt) {
           stylesheet: 'client/stylus/login/modules.styl'
         }
       },
-      add: {
-        file: 'views/add.jade',
+      category: {
+        file: 'views/category.jade',
         modulePath: 'client/modules',
         prefix: {
           js: 'modules',
           stylesheet: '../../modules'
         },
         dest: {
-          js: 'client/js/add/modules.js',
-          stylesheet: 'client/stylus/add/modules.styl'
+          js: 'client/js/category/modules.js',
+          stylesheet: 'client/stylus/category/modules.styl'
+        }
+      },
+      cost: {
+        file: 'views/cost.jade',
+        modulePath: 'client/modules',
+        prefix: {
+          js: 'modules',
+          stylesheet: '../../modules'
+        },
+        dest: {
+          js: 'client/js/cost/modules.js',
+          stylesheet: 'client/stylus/cost/modules.styl'
+        }
+      },
+      list: {
+        file: 'views/list.jade',
+        modulePath: 'client/modules',
+        prefix: {
+          js: 'modules',
+          stylesheet: '../../modules'
+        },
+        dest: {
+          js: 'client/js/list/modules.js',
+          stylesheet: 'client/stylus/list/modules.styl'
         }
       }
       // user: {

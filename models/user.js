@@ -69,6 +69,7 @@ var model = {
       if (!session.uid) {
         this.status = 301;
         this.set('location', '/login');
+        done();
       } else {
         done();
       }

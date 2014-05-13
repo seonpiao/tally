@@ -15,7 +15,14 @@ var model = {
         });
       } else {
         redis.hvals(key, function(err, reply) {
-          self.locals.categories = reply;
+          var categories = reply.map(function(item) {
+            var arr = item.split('|');
+            return {
+              category: arr[1],
+              id: arr[0]
+            }
+          });
+          self.locals.categories = categories;
           done.apply(self, arguments);
         });
       }

@@ -4,10 +4,13 @@ block append head
   link(type="text/css",rel="stylesheet",href="/css/index.css")
 
 block append content
-  div.panel              
-    p.h2 亲爱滴
-    p.h1= user.nickname || user.name
-    p.h3 败家玩意！
+  include ../client/modules/headbar/index
+  div.panel
+    ul
+      li
+        a.btn(href="/category") 记一笔
+      li
+        a(href="/list") 查看明细
 
 block append footer
   script(type='text/javascript',src="/js/index/main.js")

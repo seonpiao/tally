@@ -1,0 +1,16 @@
+extends layout
+block append head
+  title 记账
+  link(type="text/css",rel="stylesheet",href="/css/cost.css")
+
+block append content
+  include ../client/modules/headbar/index
+  table.costs
+    for item in tallies
+      tr.item
+        td= item.cost
+        td= decodeURIComponent(item.category)
+        td= (new Date(item.time * 1)).toDateString()
+
+block append footer
+  script(type='text/javascript',src="/js/cost/main.js")
