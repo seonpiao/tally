@@ -1,0 +1,24 @@
+.hover-shadow
+  transition(all .2s ease-in-out)
+  &:hover
+    box-shadow(0 2px 3px rgba(0,0,0,.3))
+hover-background($color)
+  background-color:$color
+  transition(all .2s ease-in-out)
+  &:hover
+    background-color:darken($color,3%)
+
+link-color($color)
+  color:$color
+  &:hover
+    color:darken($color,10%)
+
+input-color($color)
+  border-color:$color
+  color:darken($color,30%)
+  background-color:lighten($color,90%)
+  &:focus
+    background-color:white
+    outline: 0
+  &:disabled
+    background-color:$inputDisabledBackground

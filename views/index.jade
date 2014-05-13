@@ -1,0 +1,13 @@
+extends layout
+block append head
+  title 记账
+  link(type="text/css",rel="stylesheet",href="/css/index.css")
+
+block append content
+  div.panel              
+    p.h2 亲爱滴
+    p.h1= user.nickname || user.name
+    p.h3 败家玩意！
+
+block append footer
+  script(type='text/javascript',src="/js/index/main.js")

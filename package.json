@@ -1,0 +1,35 @@
+{
+  "name": "tally",
+  "version": "0.0.1",
+  "dependencies": {
+    "socket.io": "*",
+    "ozjs": "*",
+    "async": "0.7.0",
+    "request": "2.34.0",
+    "node.extend": "1.0.10",
+    "log4js": "0.6.13",
+    "redis": "0.10.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.3",
+    "grunt-contrib-cssmin": "~0.5.0",
+    "grunt-contrib-stylus": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-genstatic": "~0.0.14",
+    "grunt-jade-runtime": "*"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@dev.yunify.com:/data/gitrepos/pitrix-website.git"
+  },
+  "keywords": [
+    "tally"
+  ],
+  "author": "seon",
+  "license": "BSD"
+}

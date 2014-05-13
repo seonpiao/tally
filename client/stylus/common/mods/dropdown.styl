@@ -1,0 +1,117 @@
+.dropdown
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  text-align: left
+  width: 132px
+  margin-right: 10px
+  height: 32px
+  a
+    margin: 0
+    padding: 0 10px
+    background: none
+    border: 0 none
+    border-radius(0)
+    box-shadow(0 0 0 transparent)
+    text-align: left
+
+.dropdown-text
+  cursor: pointer
+  position: absolute
+  text-indent: 10px
+  line-height: 30px
+  border-bottom: 2px solid $btnBackgroundDarker
+  width: 100%;
+  background: $btnBackground
+  color: white
+  border-radius(3px)
+  &:hover
+    color: darken(@color, 5%)
+    background: darken(@background, 5%)
+    text-decoration: none
+
+.dropdown-text,
+.dropdown-content
+  a
+    color: white
+
+input.dropdown-toggle 
+  font-size: 0
+  z-index: 1
+  cursor: pointer
+  position: absolute
+  top: 0
+  border: none
+  padding: 0
+  margin: 0 0 0 1px
+  background: transparent
+  text-indent: -10px
+  height: 32px
+  width: 100%
+  &:focus 
+    outline: 0
+    border: 0 none
+    box-shadow(0 0 0 transparent)
+
+.dropdown-content
+  -webkit-transition: all .25s ease
+  -moz-transition: all .25s ease
+  -ms-transition: all .25s ease
+  -o-transition: all .25s ease
+  transition: all .25s ease
+  list-style-type: none
+  position: absolute
+  top: 34px
+  padding: 0
+  margin: 0
+  opacity: 0
+  visibility: hidden
+  line-height: 32px
+  background-color: $btnBackground
+  width: 140px
+
+.dropdown-content
+  a
+    display: block
+    &:hover
+      color: white
+      background: #373837 
+  .btn-forbidden,
+  .btn-forbidden:hover
+    color: #969696
+    background: transparent
+.dropdown-toggle:focus ~ .dropdown-text
+  box-shadow: 0 1px 3px rgba(0,0,0, .2) inset, 0 1px 0 rgba(255,255,255, 0.8)
+  z-index: 2
+
+.dropdown-toggle:focus ~ .dropdown-text:after
+  border-width: 0 4px 5px 4px
+  border-color: transparent transparent white transparent
+
+.dropdown-content:hover,
+.dropdown-toggle:focus ~ .dropdown-content
+  opacity: 1
+  visibility: visible
+
+.table
+  .dropdown
+    margin-top: -2px
+    margin-left: 5px
+    width: 19px
+    height: 16px
+  .dropdown-text
+    height: 14px
+    background: lighten($themeColor, 60%)
+    border-bottom: 2px solid lighten($themeColor, 40%)
+    &:after
+      top: 5px
+      border-color: $gray transparent transparent transparent
+  .dropdown-content
+    top: 18px
+  .dropdown-toggle
+    height: 16px
+  .dropdown-toggle:focus ~ .dropdown-text:after
+    border-color: transparent transparent $gray transparent
+  .dropdown-content:hover,
+  .dropdown-toggle:focus ~ .dropdown-content
+    top: 18px

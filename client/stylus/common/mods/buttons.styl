@@ -1,0 +1,161 @@
+// Buttons
+$btnBackground = lighten($themeBackground,25%)
+$btnBackgroundDarker = darken($btnBackground, 10%)
+$btnText = white
+
+$btnPrimaryBackground = $themeColor
+$btnPrimaryBackgroundDarker = darken($btnPrimaryBackground, 20%)
+$btnPrimaryText = white
+
+$btnForbiddenBackground = #ececec
+$btnForbiddenBackgroundDarker = darken($btnForbiddenBackground, 10%)
+$btnForbiddenText = #b8b8b8
+
+$btnDangerBackground = #bd362f
+$btnDangerBackgroundDarker = darken($btnDangerBackground, 10%)
+$btnDangerText = white
+
+btn-color($color)
+  background-color:$color
+  border-color:darken($color,10%)
+  &:hover
+    background-color:darken($color,5%)
+
+.btn
+  display: inline-block
+  padding: 9px 20px
+  margin: 0 3px 0 0
+  font-family: $fontFamily
+  font-size: $baseFontSize
+  text-align: center
+  vertical-align: middle
+  cursor: pointer
+  background: $btnBackground
+  color: $btnText
+  border-bottom: 3px solid darken($btnBackground,10%)
+  -webkit-appearance: none
+  border-radius(2px)
+  &:hover
+    color: @color
+    background: darken(@background, 5%)
+    text-decoration: none
+.btn-primary
+  color: $btnPrimaryText
+  background: $btnPrimaryBackground
+  border-bottom-color: $btnPrimaryBackgroundDarker
+  &:hover
+    color: darken(@color, 5%)
+    background: darken(@background, 5%)
+    text-decoration: none
+.btn-small
+  padding: 5px 10px
+.btn-danger
+  color: $btnDangerText
+  background: $btnDangerBackground
+  border-bottom-color: $btnDangerBackgroundDarker
+  &:hover
+    color: darken(@color, 5%)
+    background: darken(@background, 5%)
+    text-decoration: none
+
+.btn-forbidden,
+.btn-group.btn-forbidden .btn,
+.btn-primary.btn-forbidden,
+.btn-danger.btn-forbidden
+  cursor: no-drop
+  color: $btnForbiddenText
+  background: $btnForbiddenBackground
+  border-bottom-color: $btnForbiddenBackgroundDarker
+  &:hover
+    color: @color
+    background: @background
+.btn-forbidden
+  cursor: no-drop
+
+.btn
+  .icon-alert
+    color: yellow
+    animation(move 1s infinite linear)
+
+.toggle
+  background-color: #525252
+  border-radius: 60px
+  color: white
+  height: 29px
+  margin: 0 12px 12px 0
+  overflow: hidden
+  display: inline-block
+  zoom: 1
+  -webkit-transition: 0.25s
+  -moz-transition: 0.25s
+  -o-transition: 0.25s
+  transition: 0.25s
+  -webkit-backface-visibility: hidden
+.toggle:before,
+.toggle:after
+  display: table
+  content: ""
+.toggle:after
+  clear: both
+.toggle.toggle-off
+  background-color: #cbd2d8
+.toggle.toggle-off .toggle-radio
+  background-image: url("/static/images/icon-off.png")
+  background-position: 0 0
+  color: white
+  left: 0
+  margin-left: 0.5px
+  margin-right: -13px
+  z-index: 1
+.toggle.toggle-off .toggle-radio:first-child
+  left: -120%
+.toggle .toggle-radio
+  background: url("/static/images/icon-on.png") right top no-repeat
+  color: #1abc9c
+  display: block
+  font-weight: 700
+  height: 21px
+  left: 120%
+  margin-left: -13px
+  padding: 5px 32px 3px
+  position: relative
+  text-align: center
+  z-index: 2
+  -webkit-transition: 0.25s
+  -moz-transition: 0.25s
+  -o-transition: 0.25s
+  transition: 0.25s
+  -webkit-backface-visibility: hidden
+.toggle .toggle-radio:first-child
+  margin-bottom: -29px
+  left: 0
+.toggle input
+  display: none
+  position: absolute
+  outline: none !important
+  opacity: 0.01
+  zoom: 1
+.toggle.toggle-icon
+  border-radius: 6px 7px 7px 6px
+.toggle.toggle-icon.toggle-off
+  border-radius: 7px 6px 6px 7px
+.toggle.toggle-icon.toggle-off .toggle-radio
+  background-image: url("/static/images/block-off.png")
+  background-position: 0 0
+.toggle.toggle-icon .toggle-radio
+  background-image: url("/static/images/block-on.png")
+  background-position: 62px 0
+  border-radius: 6px
+  min-width: 27px
+  text-align: right
+.toggle.toggle-icon .toggle-radio:first-child
+  text-align: left
+
+table
+  .btn
+    line-height: $baseFontSize
+.dropdown
+  .btn-forbidden,
+  .btn-forbidden:hover,
+    color: #969696
+    background: transparent

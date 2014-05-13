@@ -1,0 +1,120 @@
+fieldset
+  padding: 0
+  margin: 0
+  border: 0
+  &.group
+    margin: 0 0 30px 0
+    padding: 20px 0
+    legend
+      margin-left: 230px
+      font-size: $baseFontSize + 8 
+      line-height: 2em
+      font-weight: bold
+      color: $themeColor
+      border: 0 none
+
+  
+$inputBorderRadius = 3px
+$inputBorder = #ccc
+
+// Form controls
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"]
+  display: inline-block
+  border: 1px solid $inputBorder
+  padding: 12px
+  background: $inputBackground
+  border-radius($inputBorderRadius)
+  font-size: $baseFontSize + 2
+  font-family: $baseFontFamily
+  line-height: $baseLineHeight
+  color: $gray
+  transition(all .2s ease-in-out)
+  &:focus
+    background-color:white
+    outline: 0
+
+input[disabled]
+  background: $dividingLineColor
+  color: $grayLight
+
+input[type="text"].mini
+  width: 80px
+
+input::-webkit-input-placeholder
+  color:$placeholderColor
+  font-style:italic
+input::-moz-placeholder
+  color:$placeholderColor
+  font-style:italic
+input::-ms-input-placeholder
+  color:$placeholderColor
+  font-style:italic
+
+select
+  border: 1px solid $inputBorder
+  height: 34px
+  line-height: 34px
+
+input.ip
+  width: 40px
+  font-family: $monoFontFamily
+  text-align: center
+
+textarea
+  width: auto
+  &.large
+    width: 660px
+    height: 300px
+
+.form
+  .item
+    margin: 12px 0
+  label.inline
+    display: inline-block
+    padding: 9px 10px
+  
+.form-horizontal
+  legend
+    border-bottom: 1px solid $inputBorder
+  .price-number,
+  .price-unit
+    line-height: $baseLineHeight * 2
+  .control-label
+    text-align: right
+    float: left
+    width: 130px
+    font-size: $baseFontSize + 2
+    line-height: 37px
+    vertical-align: middle
+  .controls
+    margin-left: 140px
+    min-height: 37px
+    overflow: hidden
+  .form-actions
+    padding-left: 140px
+  .help
+    display: block
+    color: $grayLight
+    font-style: italic
+    padding: 3px 0
+
+.form-actions
+  border-top: 1px solid $inputBorder
+  padding: 10px 20px
+  background: $dividingLineColor
+
+

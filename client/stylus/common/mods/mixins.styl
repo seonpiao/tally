@@ -1,0 +1,63 @@
+text-overflow()
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+border-radius($n)
+  -webkit-border-radius: $n
+  -moz-border-radius: $n
+  border-radius: $n
+
+transition($val)
+  -webkit-transition: $val
+  -moz-transition: $val
+  -o-transition: $val
+
+text-shadow($shadow)
+  -webkit-text-shadow: $shadow
+  -moz-text-shadow: $shadow
+  text-shadow: $shadow
+
+box-shadow($shadow)
+  -webkit-box-shadow: $shadow
+  -moz-box-shadow: $shadow
+  box-shadow: $shadow
+
+animation(value)
+  -moz-animation: value
+  -o-animation: value
+  -webkit-animation: value
+  animation: value
+
+animation-delay(value)
+  -moz-animation-delay: value
+  -o-animation-delay: value
+  -webkit-animation-delay: value
+  animation-delay: value
+
+transform(value)
+  -moz-transform: value
+  -o-transform: value
+  -webkit-transform: value
+  transform: value
+
+transform-style(value)
+  -moz-transform-style: value
+  -o-transform-style: value
+  -webkit-transform-style: value
+  transform-style: value
+
+clear-fix()
+  content:' '
+  height:0
+  overflow:hidden
+  display:block
+  clear:both
+
+@keyframes move
+  0%
+    transform(scale(1.2))
+    opacity: 1
+  100%
+    transform(scale(0.7))
+    opacity: 0.1
