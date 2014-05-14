@@ -35,7 +35,7 @@ var model = {
     return function(done) {
       var self = this;
       redis.incr('cost_next_id', function(err, reply) {
-        redis.hset(key, reply, cost, function() {
+        redis.hset(key, reply, reply + '|' + cost, function() {
           done.apply(self, arguments);
         });
       });

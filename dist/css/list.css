@@ -124,7 +124,5 @@ input.dropdown-toggle:focus{outline:0;border:0 none;-webkit-box-shadow:0 0 0 tra
 body .main{background:#fff}
 body footer{background:#fff}
 .headbar{padding:10px 20px}
-.costs{text-align:center;padding:20px 0;margin-bottom:120px;}
+.costs{text-align:center;padding:20px 0;}
 .costs .item{display:inline-block;padding:10px 20px;border:1px solid #b5d33a;margin:10px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
-.custom{text-align:center;position:fixed;bottom:0;width:100%;}
-.custom input{width:70%;font-size:16px;padding:15px;line-height:24px;margin-bottom:10px;border:1px solid rgba(0,0,0,0.4);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:rgba(0,0,0,0.8);outline:0}

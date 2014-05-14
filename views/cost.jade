@@ -9,6 +9,9 @@ block append content
     for item in costs
       li.item
         a(href="/done/" + item.cost)= item.cost
+  div.custom
+    input(id="cost",type="text",placeholder="自定义金额")
+    a.btn(onclick="javascript:location.href='/done/' + document.getElementById('cost').value") 确定
 
 block append footer
   script(type='text/javascript',src="/js/cost/main.js")

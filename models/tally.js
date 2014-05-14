@@ -21,7 +21,8 @@ var model = {
               id: arr[0],
               cost: arr[1],
               category: arr[2],
-              time: arr[3]
+              time: arr[3],
+              keyword: arr[4]
             };
           });
           self.locals.tallies = tallies;
@@ -34,12 +35,13 @@ var model = {
     var owner = options.owner;
     var cost = options.cost;
     var category = options.category;
+    var keyword = options.keyword;
     var time = Date.now();
     var key = util.format('tally:%s', owner);
     return function(done) {
       var self = this;
       redis.incr('tally_next_id', function(err, reply) {
-        var data = [reply, cost, category, time];
+        var data = [reply, cost, category, time, keyword];
         redis.hset(key, reply, data.join('|'), function() {
           done.apply(self, arguments);
         });

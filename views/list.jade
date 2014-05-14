@@ -1,16 +1,18 @@
 extends layout
 block append head
   title 记账
-  link(type="text/css",rel="stylesheet",href="/css/cost.css")
+  link(type="text/css",rel="stylesheet",href="/css/list.css")
 
 block append content
   include ../client/modules/headbar/index
   table.costs
+    - tallies = tallies.reverse();
     for item in tallies
       tr.item
         td= item.cost
+        td= decodeURIComponent(item.keyword)
         td= decodeURIComponent(item.category)
         td= (new Date(item.time * 1)).toDateString()
 
 block append footer
-  script(type='text/javascript',src="/js/cost/main.js")
+  script(type='text/javascript',src="/js/list/main.js")

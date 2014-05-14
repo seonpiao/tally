@@ -1,0 +1,18 @@
+extends layout
+block append head
+  title 记账
+  link(type="text/css",rel="stylesheet",href="/css/keyword.css")
+
+block append content
+  include ../client/modules/headbar/index
+  ul.keywords
+    for item in keywords
+      if item.show === 1
+        li.item
+          a(href="/cost/" + item.keyword)= item.keyword
+  div.custom
+    input(id="keyword",type="text",placeholder="自定义花费项")
+    a.btn(onclick="javascript:location.href='/cost/' + document.getElementById('keyword').value") 确定
+
+block append footer
+  script(type='text/javascript',src="/js/keyword/main.js")

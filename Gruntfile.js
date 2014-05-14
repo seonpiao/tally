@@ -15,6 +15,10 @@ module.exports = function(grunt) {
         src: ['client/stylus/login/main.styl'],
         dest: 'dist/css/login.css'
       },
+      keyword: {
+        src: ['client/stylus/keyword/main.styl'],
+        dest: 'dist/css/keyword.css'
+      },
       category: {
         src: ['client/stylus/category/main.styl'],
         dest: 'dist/css/category.css'
@@ -166,6 +170,18 @@ module.exports = function(grunt) {
         dest: {
           js: 'client/js/login/modules.js',
           stylesheet: 'client/stylus/login/modules.styl'
+        }
+      },
+      keyword: {
+        file: 'views/keyword.jade',
+        modulePath: 'client/modules',
+        prefix: {
+          js: 'modules',
+          stylesheet: '../../modules'
+        },
+        dest: {
+          js: 'client/js/keyword/modules.js',
+          stylesheet: 'client/stylus/keyword/modules.styl'
         }
       },
       category: {
