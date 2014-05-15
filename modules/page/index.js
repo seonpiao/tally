@@ -14,6 +14,7 @@ module.exports = {
           yield user.get({
             id: session.uid
           });
+          yield next;
           yield this.render('index');
         }
       }),
@@ -42,6 +43,7 @@ module.exports = {
             owner: 1
           });
           yield user.get();
+          yield next;
           yield this.render('category');
         }
       }),
@@ -53,6 +55,7 @@ module.exports = {
             owner: 1
           });
           yield user.get();
+          yield next;
           yield this.render('keyword');
         }
       }),
@@ -77,6 +80,7 @@ module.exports = {
             owner: 1
           });
           yield user.get();
+          yield next;
           yield this.render('cost');
         }
       }),
@@ -93,9 +97,9 @@ module.exports = {
             keyword: keyword,
             category: category
           });
+          yield next;
           this.status = 301;
           this.set('location', '/');
-          yield next;
         }
       }),
       app.route('/list').get(function * (next) {
@@ -105,6 +109,7 @@ module.exports = {
           yield tally.get({
             owner: session.uid
           });
+          yield next;
           yield this.render('list');
         }
       })
