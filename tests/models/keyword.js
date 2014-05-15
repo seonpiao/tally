@@ -16,7 +16,9 @@ describe('category model', function() {
     '加油|交通|1',
     '打车|交通|0',
     '超市|生活|1',
-    '猫粮|宠物|1'
+    '兔粮|宠物|1',
+    '猫粮|宠物|1',
+    '猫砂|宠物|1'
   ];
   keywords.forEach(function(keyword) {
     it('add keyword', function(done) {
