@@ -1,5 +1,6 @@
 var redis = require('../data/redis');
 var util = require('util');
+var logger = require('log4js').getLogger('model.tally');
 
 var model = {
   get: function(options) {
@@ -41,8 +42,9 @@ var model = {
     return function(done) {
       var self = this;
       redis.incr('tally_next_id', function(err, reply) {
-        var data = [reply, cost, category, time, keyword];
-        redis.hset(key, reply, data.join('|'), function() {
+        var data = [reply, cost, category, time, keyword].join('|');
+        logger.debug('Add [' + data + '] to ' + reply);
+        redis.hset(key, reply, data, function() {
           done.apply(self, arguments);
         });
       });
