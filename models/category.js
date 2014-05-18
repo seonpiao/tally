@@ -20,10 +20,8 @@ var model = {
         redis.hvals(key, function(err, reply) {
           console.log('>>>>>>' + reply)
           var categories = reply.map(function(item) {
-            var arr = item.split('|');
             return {
-              category: arr[1],
-              id: arr[0]
+              category: item,
             }
           });
           self.locals.categories = categories;
