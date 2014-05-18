@@ -49,6 +49,17 @@ var model = {
         });
       });
     }
+  },
+  remove: function(options) {
+    var owner = options.owner;
+    var id = options.id;
+    var key = util.format('tally:%s', owner);
+    return function(done) {
+      var self = this;
+      redis.hdel(key, id, function() {
+        done.apply(self, arguments);
+      });
+    }
   }
 };
 

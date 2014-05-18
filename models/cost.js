@@ -9,6 +9,7 @@ var model = {
     return function(done) {
       var self = this;
       if (!isNaN(id)) {
+        self.locals.cost = 0;
         redis.hget(key, id, function(err, reply) {
           self.locals.cost = reply;
           done.apply(self, arguments);

@@ -8,14 +8,14 @@
 100%{-moz-transform:scale(.7);-o-transform:scale(.7);-webkit-transform:scale(.7);transform:scale(.7);opacity:.1}
 }@keyframes move{0%{-moz-transform:scale(1.2);-o-transform:scale(1.2);-webkit-transform:scale(1.2);transform:scale(1.2);opacity:1}
 100%{-moz-transform:scale(.7);-o-transform:scale(.7);-webkit-transform:scale(.7);transform:scale(.7);opacity:.1}
-}body{font-family:Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;font-size:18px;letter-spacing:1px}
+}body{font-family:Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;font-size:16px;letter-spacing:1px}
 body,dl,dd,dt,ul,ol,h1,h2,h3,h4,h5,h6,input,p{margin:0;padding:0}
 ul{list-style:none}
 input[type="submit"]{border:0;outline:0}
 fieldset{padding:0;margin:0;border:0;}
 fieldset.group{margin:0 0 30px 0;padding:20px 0;}
-fieldset.group legend{margin-left:230px;font-size:26px;line-height:2em;font-weight:bold;color:#90aa26;border:0 none}
-textarea,input[type="text"],input[type="password"],input[type="datetime"],input[type="datetime-local"],input[type="date"],input[type="month"],input[type="time"],input[type="week"],input[type="number"],input[type="email"],input[type="url"],input[type="search"],input[type="tel"],input[type="color"]{display:inline-block;border:1px solid #ccc;padding:12px;background:#fff;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;font-size:20px;font-family:$baseFontFamily;line-height:16px;color:$gray;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;}
+fieldset.group legend{margin-left:230px;font-size:24px;line-height:2em;font-weight:bold;color:#90aa26;border:0 none}
+textarea,input[type="text"],input[type="password"],input[type="datetime"],input[type="datetime-local"],input[type="date"],input[type="month"],input[type="time"],input[type="week"],input[type="number"],input[type="email"],input[type="url"],input[type="search"],input[type="tel"],input[type="color"]{display:inline-block;border:1px solid #ccc;padding:12px;background:#fff;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;font-size:18px;font-family:$baseFontFamily;line-height:16px;color:$gray;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;}
 textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="color"]:focus{background-color:#fff;outline:0}
 input[disabled]{background:#aaa;color:#ccc}
 input[type="text"].mini{width:80px}
@@ -30,7 +30,7 @@ textarea.large{width:660px;height:300px}
 .form label.inline{display:inline-block;padding:9px 10px}
 .form-horizontal legend{border-bottom:1px solid #ccc}
 .form-horizontal .price-number,.form-horizontal .price-unit{line-height:32px}
-.form-horizontal .control-label{text-align:right;float:left;width:130px;font-size:20px;line-height:37px;vertical-align:middle}
+.form-horizontal .control-label{text-align:right;float:left;width:130px;font-size:18px;line-height:37px;vertical-align:middle}
 .form-horizontal .controls{margin-left:140px;min-height:37px;overflow:hidden}
 .form-horizontal .form-actions{padding-left:140px}
 .form-horizontal .help{display:block;color:#ccc;font-style:italic;padding:3px 0}
@@ -95,6 +95,7 @@ textarea.large{width:660px;height:300px}
 .btn{font-size:18px;width:70%;padding:15px;line-height:24px;border:1px solid rgba(144,170,38,0.9);background:rgba(144,170,38,0.9);display:inline-block;color:rgba(255,255,255,0.8);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 .btn:hover{color:#fff;background:rgba(165,195,44,0.9)}
 .btn:active{background:rgba(115,136,30,0.9)}
+.small-btn{width:60px;padding:8px}
 .icon-btn{font-size:36px;line-height:40px}
 a{color:#90aa26;text-decoration:none;}
 a:hover{color:#829922}
@@ -121,8 +122,9 @@ input.dropdown-toggle:focus{outline:0;border:0 none;-webkit-box-shadow:0 0 0 tra
 .table .dropdown-toggle{height:16px}
 .table .dropdown-toggle:focus ~ .dropdown-text:after{border-color:transparent transparent $gray transparent}
 .table .dropdown-content:hover,.table .dropdown-toggle:focus ~ .dropdown-content{top:18px}
-body .main{background:#fff}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+body .main{background:#fff;padding:0 10px;color:#555}
 body footer{background:#fff}
-.headbar{padding:10px 20px}
+.headbar{padding:7px 0}
 .categories{text-align:center;padding:50px 0;}
 .categories .item{display:inline-block;padding:10px 20px;border:1px solid #b5d33a;margin:10px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}

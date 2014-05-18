@@ -1,0 +1,1 @@
+require(['js/list/modules'], function() {});

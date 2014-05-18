@@ -102,41 +102,8 @@ module.exports = function(grunt) {
           disableAutoSuffix: true
         }
       },
-      index: {
-        src: 'client/js/index/main.js',
-        saveConfig: false,
-        debounceDelay: 3000,
-        config: {
-          baseUrl: "client/",
-          distUrl: "dist/",
-          loader: "js/libs/oz.js",
-          disableAutoSuffix: true
-        }
-      },
-      post: {
-        src: 'client/js/post/main.js',
-        saveConfig: false,
-        debounceDelay: 3000,
-        config: {
-          baseUrl: "client/",
-          distUrl: "dist/",
-          loader: "js/libs/oz.js",
-          disableAutoSuffix: true
-        }
-      },
-      detail: {
-        src: 'client/js/detail/main.js',
-        saveConfig: false,
-        debounceDelay: 3000,
-        config: {
-          baseUrl: "client/",
-          distUrl: "dist/",
-          loader: "js/libs/oz.js",
-          disableAutoSuffix: true
-        }
-      },
-      // user: {
-      //   src: 'client/js/user/main.js',
+      // index: {
+      //   src: 'client/js/index/main.js',
       //   saveConfig: false,
       //   debounceDelay: 3000,
       //   config: {
@@ -145,7 +112,29 @@ module.exports = function(grunt) {
       //     loader: "js/libs/oz.js",
       //     disableAutoSuffix: true
       //   }
-      // }
+      // },
+      cost: {
+        src: 'client/js/cost/main.js',
+        saveConfig: false,
+        debounceDelay: 3000,
+        config: {
+          baseUrl: "client/",
+          distUrl: "dist/",
+          loader: "js/libs/oz.js",
+          disableAutoSuffix: true
+        }
+      },
+      list: {
+        src: 'client/js/list/main.js',
+        saveConfig: false,
+        debounceDelay: 3000,
+        config: {
+          baseUrl: "client/",
+          distUrl: "dist/",
+          loader: "js/libs/oz.js",
+          disableAutoSuffix: true
+        }
+      }
     },
     genstatic: {
       index: {
@@ -235,7 +224,7 @@ module.exports = function(grunt) {
     }
   });
 
-  // grunt.loadNpmTasks('grunt-ozjs');
+  grunt.loadNpmTasks('grunt-ozjs');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-stylus');

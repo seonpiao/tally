@@ -13,6 +13,10 @@ block append content
         td= decodeURIComponent(item.keyword)
         td= decodeURIComponent(item.category)
         td= (new Date(item.time * 1)).toDateString()
+        td
+          include ../client/modules/del_tally/index
+          +delTally(item.id)
 
 block append footer
+  script(type='text/javascript',src="/js/common/main.js")
   script(type='text/javascript',src="/js/list/main.js")

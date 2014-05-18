@@ -1,0 +1,31 @@
+.num_keyboard
+  display:block
+  text-align:center
+  .keys
+    margin:0 auto
+    position:fixed
+    bottom:20px
+    width:300px
+    left:50%
+    margin-left:-150px
+    .key
+      display:inline
+      a
+        display:inline-block
+        width:60px
+        line-height:40px
+        border:1px solid lighten($themeColor,20%)
+        margin:5px
+        border-radius(3px)
+        transition(all .3s ease-out)
+        &:active
+          background:$themeColor
+          color:white
+      &.ok
+        a
+          background:$themeColor
+          color:white
+          width:132px
+      &.zero
+        a
+          width:132px

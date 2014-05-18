@@ -6,13 +6,34 @@ block append head
 block append content
   include ../client/modules/headbar/index
   ul.keywords
+    - keywords.sort(function(a,b){return b.count - a.count})
     for item in keywords
-      if item.show === 1
-        li.item
-          a(href="/cost/" + item.keyword)= item.keyword
+      li.item
+        a(href="/cost/" + item.keyword + '/' + item.category)= item.keyword
   div.custom
     input(id="keyword",type="text",placeholder="自定义花费项")
-    a.btn(onclick="javascript:location.href='/cost/' + document.getElementById('keyword').value") 确定
+    select(id="category")
+      option --
+      for item in categories
+        option= item.category
+      option 新分类
+    a.btn.small-btn(onclick="javascript:if(document.getElementById('category').value === '--'){alert('必须选择一个分类');return;}location.href='/cost/' + document.getElementById('keyword').value + '/' + document.getElementById('category').value") 确定
+  script.
+    var $select = document.getElementById('category');
+    $select.onchange = function(){
+      if($select.value === '新分类'){
+        setTimeout(function(){
+          var category = prompt('输入分类名');
+          var option = document.createElement('option');
+          option.innerText = category;
+          option.value = category;
+          setTimeout(function(){
+            $select.appendChild(option);
+            $select.selectedIndex = $select.options.length - 1;
+          },0);
+        });
+      }
+    };
 
 block append footer
   script(type='text/javascript',src="/js/keyword/main.js")
