@@ -15,10 +15,8 @@ var model = {
           done.apply(self, arguments);
         });
       } else {
-        console.log('>>>>>>')
         self.locals.categories = [];
         redis.hvals(key, function(err, reply) {
-          console.log('>>>>>>' + reply)
           var categories = reply.map(function(item) {
             return {
               category: item,

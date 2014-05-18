@@ -779,7 +779,7 @@ define("modules/num_keyboard/view", [
     _ok: function(e) {
       e.preventDefault();
       var cost = parseFloat(this.model.get('cost'));
-      location.href = '/done/' + cost;
+      location.href = '/done/' + cost + '/?' + Date.now();
     },
     _clear: function(e) {
       e.preventDefault();
