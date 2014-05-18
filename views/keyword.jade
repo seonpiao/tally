@@ -23,14 +23,16 @@ block append content
     $select.onchange = function(){
       if($select.value === '新分类'){
         setTimeout(function(){
-          var category = prompt('输入分类名');
-          var option = document.createElement('option');
-          option.innerText = category;
-          option.value = category;
-          setTimeout(function(){
-            $select.appendChild(option);
-            $select.selectedIndex = $select.options.length - 1;
-          },0);
+          var category = prompt('输入分类名').trim();
+          if(category){
+            var option = document.createElement('option');
+            option.innerText = category;
+            option.value = category;
+            setTimeout(function(){
+              $select.appendChild(option);
+              $select.selectedIndex = $select.options.length - 1;
+            },0);
+          }
         });
       }
     };
