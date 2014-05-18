@@ -40,7 +40,7 @@ module.exports = {
         yield userModel.check(session);
         if (this.status !== 301) {
           yield categoryModel.get({
-            owner: 1
+            owner: session.uid
           });
           yield userModel.get();
           yield next;
