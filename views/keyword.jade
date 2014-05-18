@@ -15,7 +15,7 @@ block append content
     select(id="category")
       option --
       for item in categories
-        option= item.category
+        option= decodeURIComponent(item.category)
       option 新分类
     a.btn.small-btn(onclick="javascript:if(document.getElementById('category').value === '--'){alert('必须选择一个分类');return;}location.href='/cost/' + document.getElementById('keyword').value + '/' + document.getElementById('category').value") 确定
   script.
