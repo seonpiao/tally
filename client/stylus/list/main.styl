@@ -1,11 +1,32 @@
 @import '../common/base'
 @import 'modules'
 .costs
-  text-align:center
   padding:20px 0
   .item
-    display:inline-block
-    padding:10px 20px
+    display:block
+    padding:5px 10px
     border:1px solid lighten($themeColor,20%)
     margin:10px
+    position:relative
     border-radius(3px)
+    color:$textColor
+    strong
+      font-size:18px
+      display:inline-block
+      width:140px
+      color:$secondThemeColor
+      small
+        font-size:12px
+        display:block
+        color:$textColor
+    .info
+      position:absolute
+      bottom:0
+      right:0
+      .keyword,.category
+        line-height:30px
+        padding-right:10px
+    .del
+      position:absolute
+      top:0
+      right:0

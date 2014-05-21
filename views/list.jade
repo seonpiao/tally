@@ -5,15 +5,17 @@ block append head
 
 block append content
   include ../client/modules/headbar/index
-  table.costs
+  ul.costs
     - tallies = tallies.reverse();
     for item in tallies
-      tr.item
-        td= item.cost
-        td= decodeURIComponent(item.keyword)
-        td= decodeURIComponent(item.category)
-        td= (new Date(item.time * 1)).toDateString()
-        td
+      li.item
+        strong.cost
+          = item.cost
+          small.time= (new Date(item.time * 1)).toDateString()
+        span.info
+          span.keyword= item.keyword
+          span.category= item.category
+        span.del
           include ../client/modules/del_tally/index
           +delTally(item.id)
 
