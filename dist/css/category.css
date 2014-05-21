@@ -93,6 +93,7 @@ textarea.large{width:660px;height:300px}
 .icon-back::before{content:"\f190"}
 .icon-forward::before{content:"\f18e"}
 .icon-plus::before{content:"\f067"}
+.icon-home::before{content:"\f015"}
 .btn{font-size:18px;width:70%;padding:15px;line-height:24px;border:1px solid rgba(144,170,38,0.9);background:rgba(144,170,38,0.9);display:inline-block;color:rgba(255,255,255,0.8);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 .btn:hover{color:#fff;background:rgba(165,195,44,0.9)}
 .btn:active{background:rgba(115,136,30,0.9)}
@@ -126,6 +127,7 @@ input.dropdown-toggle:focus{outline:0;border:0 none;-webkit-box-shadow:0 0 0 tra
 *{-webkit-tap-highlight-color:rgba(0,0,0,0)}
 body .main{background:#fff;padding:0 10px;color:#555}
 body footer{background:#fff}
-.headbar{padding:7px 0}
+.headbar{padding:7px 0;position:relative;}
+.headbar .icon-home{position:absolute;right:0}
 .categories{text-align:center;padding:50px 0;}
 .categories .item{display:inline-block;padding:10px 20px;border:1px solid #b5d33a;margin:10px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}

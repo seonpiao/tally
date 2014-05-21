@@ -5,6 +5,6 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<div data-module=\"headbar\" class=\"headbar\"><a href=\"javascript:history.back()\" class=\"icon-btn icon-back\"></a></div>");;return buf.join("");
+buf.push("<div data-module=\"headbar\" class=\"headbar\"><a href=\"javascript:history.back()\" class=\"icon-btn icon-back\"></a><a href=\"/\" class=\"icon-btn icon-home\"></a></div>");;return buf.join("");
 };
 })();
