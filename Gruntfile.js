@@ -134,6 +134,17 @@ module.exports = function(grunt) {
           loader: "js/libs/oz.js",
           disableAutoSuffix: true
         }
+      },
+      keyword: {
+        src: 'client/js/keyword/main.js',
+        saveConfig: false,
+        debounceDelay: 3000,
+        config: {
+          baseUrl: "client/",
+          distUrl: "dist/",
+          loader: "js/libs/oz.js",
+          disableAutoSuffix: true
+        }
       }
     },
     genstatic: {

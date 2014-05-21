@@ -691,6 +691,9 @@ define("js/views/base", function() {
         callback(template(renderData));
       });
     },
+    $: function(selector) {
+      return this.$el.find(selector);
+    },
     __activeHack: function() {}
   });
   return View;

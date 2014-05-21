@@ -1,0 +1,8 @@
+div.add_keyword(data-module="add_keyword")
+  input(id="keyword",type="text",placeholder="关键字")
+  select(id="category")
+    option 选择分类
+    for item in categories
+      option= decodeURIComponent(item.category)
+    option 新分类
+  a.btn.small-btn(onclick="javascript:if(document.getElementById('category').selectedIndex === 0){alert('必须选择一个分类');return;}if(document.getElementById('keyword').value === ''){alert('必须输入关键词');return;}location.href='/cost/' + document.getElementById('keyword').value + '/' + document.getElementById('category').value") 确定

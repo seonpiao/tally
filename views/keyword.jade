@@ -10,14 +10,7 @@ block append content
     for item in keywords
       li.item
         a(href="/cost/" + item.keyword + '/' + item.category)= item.keyword
-  div.custom
-    input(id="keyword",type="text",placeholder="自定义花费项")
-    select(id="category")
-      option --
-      for item in categories
-        option= decodeURIComponent(item.category)
-      option 新分类
-    a.btn.small-btn(onclick="javascript:if(document.getElementById('category').value === '--'){alert('必须选择一个分类');return;}location.href='/cost/' + document.getElementById('keyword').value + '/' + document.getElementById('category').value") 确定
+  include ../client/modules/add_keyword/index
   script.
     var $select = document.getElementById('category');
     $select.onchange = function(){
@@ -38,4 +31,5 @@ block append content
     };
 
 block append footer
+  script(type='text/javascript',src="/js/common/main.js")
   script(type='text/javascript',src="/js/keyword/main.js")
