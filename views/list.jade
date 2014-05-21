@@ -13,8 +13,8 @@ block append content
           = item.cost
           small.time= (new Date(item.time * 1)).toDateString()
         span.info
-          span.keyword= item.keyword
-          span.category= item.category
+          span.keyword= decodeURIComponent(item.keyword)
+          span.category= decodeURIComponent(item.category)
         span.del
           include ../client/modules/del_tally/index
           +delTally(item.id)
