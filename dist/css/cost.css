@@ -129,7 +129,7 @@ body .main{background:#fff;padding:0 10px;color:#555}
 body footer{background:#fff}
 .headbar{padding:7px 0;position:relative;}
 .headbar .icon-home{position:absolute;right:0}
-.state_bar{display:block;padding:40px 0;text-align:center;}
+.state_bar{display:block;padding:20px 0;text-align:center;}
 .state_bar .type,.state_bar .keyword{color:#777;padding:5px}
 .state_bar .cost{font-size:72px;line-height:120px;color:#f3a036}
 .num_keyboard{display:block;text-align:center;}
