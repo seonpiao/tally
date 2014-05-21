@@ -133,7 +133,7 @@ body footer{background:#fff}
 .headbar .icon-home{position:absolute;right:0}
 .costs{padding:20px 0;}
 .costs .item{display:block;padding:5px 10px;border:1px solid #b5d33a;margin:10px;position:relative;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#777;}
-.costs .item strong{font-size:18px;display:inline-block;width:140px;color:#f3a036;}
+.costs .item strong{font-size:24px;display:inline-block;width:140px;color:#f3a036;}
 .costs .item strong small{font-size:12px;display:block;color:#777}
 .costs .item .info{position:absolute;bottom:0;right:0;}
 .costs .item .info .keyword,.costs .item .info .category{line-height:30px;padding-right:10px}

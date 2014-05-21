@@ -770,11 +770,14 @@ define("modules/del_tally/view", [
       var target = $(e.target);
       var id = target.attr('data-tally');
       this.model.id = id;
-      this.model.fetch({
-        success: function() {
-          location.reload();
-        }
-      })
+      var isDel = confirm('确定要删除么?');
+      if (isDel) {
+        this.model.fetch({
+          success: function() {
+            location.reload();
+          }
+        });
+      }
     }
   });
   return View;
