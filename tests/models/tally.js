@@ -36,15 +36,15 @@ describe('cost model', function() {
         });
         for (var year in years) {
           var ids = years[year].items.join(',');
-          redis.set('tally:index:' + year, ids, function(err, reply) {});
+          redis.set('tally:1:index:' + year, ids, function(err, reply) {});
           var months = years[year].months;
           for (var month in months) {
             var ids = months[month].items.join(',');
-            redis.set('tally:index:' + year + ":" + month, ids, function(err, reply) {});
+            redis.set('tally:1:index:' + year + ":" + month, ids, function(err, reply) {});
             var dates = months[month].dates;
             for (var date in dates) {
               var ids = dates[date].items.join(',');
-              redis.set('tally:index:' + year + ":" + month + ":" + date, ids, function(err, reply) {});
+              redis.set('tally:1:index:' + year + ":" + month + ":" + date, ids, function(err, reply) {});
             }
           }
         }
