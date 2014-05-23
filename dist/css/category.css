@@ -63,7 +63,7 @@ textarea.large{width:660px;height:300px}
 .grid_24{width:100%}
 @media screen and (max-width: 480px){div[class^="grid_"]{float:none;display:block;width:100%;margin:0}
 }@font-face{font-family:'FontAwesome';src:url("/fonts/fontawesome-webfont.woff?v=4.0.3") format('woff'),url("/fonts/fontawesome-webfont.eot?v=4.0.3"),url("/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format('embedded-opentype'),url("/fonts/fontawesome-webfont.ttf?v=4.0.3") format('truetype'),url("/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format('svg');font-weight:normal;font-style:normal}
-[class^="icon-"],[class*=" icon-"]{vertical-align:baseline;font-size:36px}
+[class^="icon-"],[class*=" icon-"]{vertical-align:baseline;font-size:30px}
 [class^="icon-"]:after,[class*=" icon-"]:after,[class^="icon-"]:before,[class*=" icon-"]:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-align:center;display:inline-block;width:1em;text-decoration:none}
 .icon-comment::before{content:"\f075"}
 .icon-user::before{content:"\f007"}
@@ -94,11 +94,12 @@ textarea.large{width:660px;height:300px}
 .icon-forward::before{content:"\f18e"}
 .icon-plus::before{content:"\f067"}
 .icon-home::before{content:"\f015"}
+.icon-chart::before{content:'\f080'}
 .btn{font-size:18px;width:70%;padding:15px;line-height:24px;border:1px solid rgba(144,170,38,0.9);background:rgba(144,170,38,0.9);display:inline-block;color:rgba(255,255,255,0.8);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 .btn:hover{color:#fff;background:rgba(165,195,44,0.9)}
 .btn:active{background:rgba(115,136,30,0.9)}
 .small-btn{width:60px;padding:8px}
-.icon-btn{font-size:36px;line-height:40px}
+.icon-btn{font-size:30px;line-height:40px}
 a{color:#90aa26;text-decoration:none;}
 a:hover{color:#829922}
 .clearfix::after{content:'.';height:0;overflow:hidden;display:block;clear:both}
@@ -126,10 +127,12 @@ input.dropdown-toggle:focus{outline:0;border:0 none;-webkit-box-shadow:0 0 0 tra
 .table .dropdown-content:hover,.table .dropdown-toggle:focus ~ .dropdown-content{top:18px}
 *{-webkit-tap-highlight-color:rgba(0,0,0,0)}
 html{height:100%;}
-html body{height:100%;width:100%;}
-html body .main{background:#fff;padding:0 10px;color:#555}
+html body{width:100%;}
+html body .head{position:fixed;top:0;z-index:10;width:100%}
+html body .main{background:#fff;padding:0 10px;color:#555;margin-top:56px}
 html footer{background:#fff}
-.headbar{padding:7px 0;position:relative;}
-.headbar .icon-home{position:absolute;right:0}
+.headbar{padding:7px 5px;width:100%;background:rgba(0,0,0,0.7);}
+.headbar .icon-btn{color:#fff}
+.headbar .icon-home{position:absolute;right:5px}
 .categories{text-align:center;padding:50px 0;}
 .categories .item{display:inline-block;padding:10px 20px;border:1px solid #b5d33a;margin:10px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}

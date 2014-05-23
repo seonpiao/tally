@@ -3,8 +3,10 @@ block append head
   title 记账
   link(type="text/css",rel="stylesheet",href="/css/keyword.css")
 
-block append content
+block append header
   include ../client/modules/headbar/index
+
+block append content
   ul.keywords
     - keywords.sort(function(a,b){return b.count - a.count})
     for item in keywords

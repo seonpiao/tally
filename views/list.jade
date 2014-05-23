@@ -3,8 +3,10 @@ block append head
   title 记账
   link(type="text/css",rel="stylesheet",href="/css/list.css")
 
-block append content
+block append header
   include ../client/modules/headbar/index
+
+block append content
   - var total = 0;
   for item in tallies
     - total += parseFloat(item.cost)
@@ -12,6 +14,7 @@ block append content
     |总计：
     strong.num= (total.toString().indexOf('.') === -1 ? total : total.toFixed(2))
       small 元
+    a.category.icon-chart(href="/category")
   ul.costs
     - tallies = tallies.reverse();
     for item in tallies
