@@ -20,6 +20,7 @@ describe('cost model', function() {
           var date = new Date(parseInt(time));
           var year = date.getFullYear();
           var month = date.getMonth() + 1;
+          date = date.getDate();
           redis.rpush('tally:1:index:' + year, id);
           redis.rpush('tally:1:index:' + year + ':' + month, id);
           redis.rpush('tally:1:index:' + year + ':' + month + ':' + date, id);
@@ -28,16 +29,12 @@ describe('cost model', function() {
       done();
     })
   });
-  it('get by year', function(done) {
+  it('delete keys', function(done) {
     var ctx = {
       locals: {}
     };
-    model.get({
-      owner: 1,
-      year: 2014
-    }).call(ctx, function(err, reply) {
-      assert.equal(1, reply.length);
-      done();
-    })
+    redis.keys('tally:1:index:*', function(err, reply) {
+      redis.del(reply);
+    });
   });
 });
