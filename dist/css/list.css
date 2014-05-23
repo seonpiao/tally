@@ -146,6 +146,6 @@ html footer{background:#fff}
 .costs .item strong{font-size:30px;display:inline-block;width:140px;color:#f3a036;}
 .costs .item strong .unit{font-size:16px}
 .costs .item strong .time{font-size:12px;display:block;color:#777;font-weight:normal}
-.costs .item .info{position:absolute;bottom:10px;right:0;}
+.costs .item .info{position:absolute;bottom:5px;right:0;}
 .costs .item .info .keyword,.costs .item .info .category{line-height:30px;padding-right:10px;font-size:14px}
 .costs .item .del{position:absolute;top:10px;right:0}
