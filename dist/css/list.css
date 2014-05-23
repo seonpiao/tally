@@ -138,14 +138,14 @@ html footer{background:#fff}
 .headbar .icon-btn{color:#fff}
 .headbar .icon-home{position:absolute;right:5px}
 .summary{padding-top:20px;position:relative;}
-.summary .num{color:#f3a036;font-size:24px;}
+.summary .num{color:#90aa26;}
 .summary .num small{font-size:14px}
-.summary .category{position:absolute;right:0;line-height:31px;font-size:20px;color:#777}
+.summary .category{position:absolute;right:0;top:16px;font-size:20px;color:#777}
 .costs{padding-bottom:10px;}
-.costs .item{display:block;padding:5px 10px;border:1px solid #b5d33a;margin:10px 0;position:relative;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#777;}
+.costs .item{display:block;padding:10px;border-bottom:1px solid #b5d33a;margin:10px 0;position:relative;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#777;}
 .costs .item strong{font-size:30px;display:inline-block;width:140px;color:#f3a036;}
 .costs .item strong .unit{font-size:16px}
 .costs .item strong .time{font-size:12px;display:block;color:#777;font-weight:normal}
-.costs .item .info{position:absolute;bottom:0;right:0;}
+.costs .item .info{position:absolute;bottom:10px;right:0;}
 .costs .item .info .keyword,.costs .item .info .category{line-height:30px;padding-right:10px;font-size:14px}
-.costs .item .del{position:absolute;top:0;right:0}
+.costs .item .del{position:absolute;top:10px;right:0}
