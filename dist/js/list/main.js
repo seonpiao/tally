@@ -763,7 +763,7 @@ define("modules/del_tally/view", [
   var View = Base.extend({
     moduleName: "del_tally",
     events: {
-      'touchstart a': '_del'
+      'touchend a': '_del'
     },
     _del: function(e) {
       e.preventDefault();

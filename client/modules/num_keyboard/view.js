@@ -2,11 +2,11 @@ define(["js/views/base"], function(Base) {
   var View = Base.extend({
     moduleName: "num_keyboard",
     events: {
-      'touchstart .num': '_input',
-      'touchstart .del': '_del',
-      'touchstart .clear': '_clear',
-      'touchstart .ok': '_ok',
-      'touchstart .operator': '_operate'
+      'touchend .num': '_input',
+      'touchend .del': '_del',
+      'touchend .clear': '_clear',
+      'touchend .ok': '_ok',
+      'touchend .operator': '_operate'
     },
     init: function() {},
     _input: function(e) {

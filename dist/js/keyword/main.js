@@ -1475,7 +1475,7 @@ define("modules/add_keyword/interfaces/keywordList", [
 ], function(Interface) {
   var View = Interface.extend({
     events: {
-      'touchstart': 'toggle'
+      'touchend': 'toggle'
     },
     init: function() {
       this.appendTo('.keywords');

@@ -1,7 +1,7 @@
 define(["js/views/interface"], function(Interface) {
   var View = Interface.extend({
     events: {
-      'touchstart': 'toggle'
+      'touchend': 'toggle'
     },
     init: function() {
       this.appendTo('.keywords');
