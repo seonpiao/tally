@@ -29,12 +29,14 @@ describe('cost model', function() {
       done();
     })
   });
-  it('delete keys', function(done) {
+  it.skip('delete keys', function(done) {
     var ctx = {
       locals: {}
     };
-    redis.keys('tally:1:index:*', function(err, reply) {
-      redis.del(reply);
+    redis.keys('tally:1:index:\*', function(err, reply) {
+      redis.del(reply,function(err,reply){
+        done();
+      });
     });
   });
 });
