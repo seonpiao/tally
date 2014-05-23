@@ -10,14 +10,13 @@ block append content
     - total += parseFloat(item.cost)
   p.summary
     |总计：
-    strong.num= total.toFixed(2);
+    strong.num= (total.toString().indexOf('.') === -1 ? total : total.toFixed(2))
       small 元
   ul.costs
     - tallies = tallies.reverse();
     for item in tallies
       li.item
-        strong.cost
-          = item.cost
+        strong.cost= (item.cost.indexOf('.') === -1 ? item.cost : parseFloat(item.cost).toFixed(2))
           small.unit 元
           small.time= (new Date(item.time * 1)).toDateString()
         span.info
