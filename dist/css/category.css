@@ -125,8 +125,10 @@ input.dropdown-toggle:focus{outline:0;border:0 none;-webkit-box-shadow:0 0 0 tra
 .table .dropdown-toggle:focus ~ .dropdown-text:after{border-color:transparent transparent $gray transparent}
 .table .dropdown-content:hover,.table .dropdown-toggle:focus ~ .dropdown-content{top:18px}
 *{-webkit-tap-highlight-color:rgba(0,0,0,0)}
-body .main{background:#fff;padding:0 10px;color:#555}
-body footer{background:#fff}
+html{height:100%;}
+html body{height:100%;width:100%;}
+html body .main{background:#fff;padding:0 10px;color:#555}
+html footer{background:#fff}
 .headbar{padding:7px 0;position:relative;}
 .headbar .icon-home{position:absolute;right:0}
 .categories{text-align:center;padding:50px 0;}

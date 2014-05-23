@@ -131,8 +131,12 @@ module.exports = {
         var session = yield this.session;
         yield userModel.check(session);
         if (this.status !== 301) {
+          var now = new Date();
+          this.locals.tallies = [];
           yield tallyModel.get({
-            owner: session.uid
+            owner: session.uid,
+            year: now.getFullYear(),
+            month: now.getMonth() + 1
           });
           yield next;
           yield this.render('list');
@@ -144,6 +148,10 @@ module.exports = {
         if (this.status !== 301) {
           var id = this.request.params.id;
           if (id) {
+            yield tallyModel.get({
+              owner: session.uid,
+              id: id
+            });
             yield tallyModel.remove({
               owner: session.uid,
               id: id

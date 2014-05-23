@@ -1,6 +1,4 @@
-define([ "js/common/moduleRunner", "modules/headbar/index" ], function(ModuleRunner, headbar) {
-    var modules = {
-        headbar: headbar
-    };
+define([ "js/common/moduleRunner" ], function(ModuleRunner) {
+    var modules = {};
     ModuleRunner.run(modules);
 });

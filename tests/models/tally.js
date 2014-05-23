@@ -52,4 +52,16 @@ describe('cost model', function() {
       done();
     })
   });
+  it('get by year', function(done) {
+    var ctx = {
+      locals: {}
+    };
+    model.get({
+      owner: 1,
+      year: 2014
+    }).call(ctx, function(err, reply) {
+      assert.equal(1, reply.length);
+      done();
+    })
+  });
 });

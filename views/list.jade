@@ -5,12 +5,20 @@ block append head
 
 block append content
   include ../client/modules/headbar/index
+  - var total = 0;
+  for item in tallies
+    - total += parseFloat(item.cost)
+  p.summary
+    |总计：
+    strong.num= total
+      small 元
   ul.costs
     - tallies = tallies.reverse();
     for item in tallies
       li.item
         strong.cost
           = item.cost
+          small.unit 元
           small.time= (new Date(item.time * 1)).toDateString()
         span.info
           span.keyword= decodeURIComponent(item.keyword)
