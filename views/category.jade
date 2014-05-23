@@ -24,12 +24,12 @@ block append content
     |var chartData = 
     != JSON.stringify(chartData)
   div.chart
-    canvas#chart(width=160,height=160)
+    canvas#chart(width=200,height=200)
     ul.desc
       for item,name in chartData
         li.category
-          span.color(style='background:' + item.color)
           span.name= name
+          span.color(style='background:' + item.color)
 block append footer
   script(type='text/javascript',src="/externals/chart.js")
   script(type='text/javascript',src="/js/common/main.js")

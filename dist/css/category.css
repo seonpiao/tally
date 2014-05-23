@@ -136,6 +136,7 @@ html footer{background:#fff}
 .headbar .icon-btn{color:#fff}
 .headbar .icon-home{position:absolute;right:5px}
 .chart{padding-top:40px;position:relative;}
-.chart .desc{position:absolute;top:50px;right:0;width:120px;}
-.chart .desc .category .color{display:inline-block;width:20px;height:20px;vertical-align:middle;margin-right:8px}
+.chart .desc{position:absolute;top:50px;right:0;}
+.chart .desc .category{text-align:right;}
+.chart .desc .category .color{display:inline-block;width:20px;height:20px;vertical-align:middle;margin-left:8px}
 .chart .desc .category .name{font-size:14px;vertical-align:middle}
