@@ -136,6 +136,7 @@ html footer{background:#fff}
 .summary{padding-top:20px;}
 .summary .num{color:#f3a036;font-size:24px;}
 .summary .num small{font-size:14px}
+.costs{padding-bottom:10px;}
 .costs .item{display:block;padding:5px 10px;border:1px solid #b5d33a;margin:10px 0;position:relative;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#777;}
 .costs .item strong{font-size:30px;display:inline-block;width:140px;color:#f3a036;}
 .costs .item strong .unit{font-size:16px}
