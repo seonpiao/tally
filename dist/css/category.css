@@ -128,10 +128,11 @@ input.dropdown-toggle:focus{outline:0;border:0 none;-webkit-box-shadow:0 0 0 tra
 *{-webkit-tap-highlight-color:rgba(0,0,0,0)}
 html{height:100%;}
 html body{width:100%;}
-html body .head{position:fixed;top:0;z-index:10;width:100%}
-html body .main{background:#fff;padding:0 10px;color:#555;margin-top:56px}
+html body .head{position:fixed;top:0;z-index:10;width:100%;}
+html body .head .icon-btn{line-height:46px}
+html body .main{background:#fff;padding:0 10px;color:#555;margin-top:48px}
 html footer{background:#fff}
-.headbar{padding:7px 5px;width:100%;background:rgba(0,0,0,0.7);}
+.headbar{padding:0 5px;width:100%;background:rgba(0,0,0,0.7);}
 .headbar .icon-btn{color:#fff}
 .headbar .icon-home{position:absolute;right:5px}
 .categories{text-align:center;padding:50px 0;}
