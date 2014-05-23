@@ -1,19 +1,17 @@
-extends layout
-block append head
-  title 记账
-  link(type="text/css",rel="stylesheet",href="/css/login.css")
-
-block append content
-  div.cover
-  div.panel              
-    h1.title 轻松记账
-    form(method="POST",action="/login" id="login_form")
-      div.user
-        input(placeholder="用户名",name="name")
-      div.password
-        input(type="password",placeholder="密码",name="passwd")
-      div.submit
-        a.btn(href="#",onclick="document.getElementById('login_form').submit()") 确定
-
-block append footer
-  script(type='text/javascript',src="/js/login/main.js")
+doctype html
+html(lang="en")
+  head
+    meta(name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no")
+    title 记账
+    link(type="text/css",rel="stylesheet",href="/css/login.css")
+  body
+    div.cover
+    div.panel              
+      h1.title 轻松记账
+      form(method="POST",action="/login" id="login_form")
+        div.user
+          input(placeholder="用户名",name="name")
+        div.password
+          input(type="password",placeholder="密码",name="passwd")
+        div.submit
+          a.btn(href="#",onclick="document.getElementById('login_form').submit()") 确定
