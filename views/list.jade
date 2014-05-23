@@ -10,7 +10,7 @@ block append content
     - total += parseFloat(item.cost)
   p.summary
     |总计：
-    strong.num= total
+    strong.num= total.toFixed(2);
       small 元
   ul.costs
     - tallies = tallies.reverse();
