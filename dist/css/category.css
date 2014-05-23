@@ -135,5 +135,7 @@ html footer{background:#fff}
 .headbar{padding:0 5px;width:100%;background:rgba(0,0,0,0.7);}
 .headbar .icon-btn{color:#fff}
 .headbar .icon-home{position:absolute;right:5px}
-.categories{text-align:center;padding:50px 0;}
-.categories .item{display:inline-block;padding:10px 20px;border:1px solid #b5d33a;margin:10px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
+.chart{padding-top:40px;position:relative;}
+.chart .desc{position:absolute;top:50px;right:0;width:120px;}
+.chart .desc .category .color{display:inline-block;width:20px;height:20px;vertical-align:middle;margin-right:8px}
+.chart .desc .category .name{font-size:14px;vertical-align:middle}

@@ -3,12 +3,47 @@ block append head
   title 记账
   link(type="text/css",rel="stylesheet",href="/css/category.css")
 
-block append content
+block append header
   include ../client/modules/headbar/index
-  ul.categories
-    for item in categories
-      li.item
-        a(href="/cost/" + item.category)= item.category
 
+block append content
+  - var chartData = {};
+  - var colors = [];
+  - colors.push('rgb(184, 178, 43)');
+  - colors.push('rgb(125, 165, 40)');
+  - colors.push('rgb(176, 213, 112)');
+  - colors.push('rgb(57, 167, 123)');
+  - colors.push('rgb(146, 141, 35)');
+  - colors.push('rgb(82, 196, 61)');
+  - var colorIndex = 0;
+  for item in tallies
+    - var categoryName = decodeURIComponent(item.category);
+    - if(!chartData[categoryName]) chartData[categoryName] = {cost:0,color:colors[colorIndex++]};
+    - chartData[categoryName].cost += parseFloat(item.cost);
+  script
+    |var chartData = 
+    != JSON.stringify(chartData)
+  div.chart
+    canvas#chart(width=160,height=160)
+    ul.desc
+      for item,name in chartData
+        li.category
+          span.color(style='background:' + item.color)
+          span.name= name
 block append footer
+  script(type='text/javascript',src="/externals/chart.js")
+  script(type='text/javascript',src="/js/common/main.js")
   script(type='text/javascript',src="/js/category/main.js")
+  script.
+    (function(){
+      var ctx = document.getElementById("chart").getContext("2d");
+      var data = [];
+      for(var name in chartData){
+        data.push({
+          value:chartData[name].cost,
+          color:chartData[name].color
+        });
+        var $li = $('<li >')
+      }
+      var myNewChart = new Chart(ctx).Pie(data);
+    })();

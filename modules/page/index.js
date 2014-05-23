@@ -39,10 +39,13 @@ module.exports = {
         var session = yield this.session;
         yield userModel.check(session);
         if (this.status !== 301) {
-          yield categoryModel.get({
-            owner: session.uid
+          var now = new Date();
+          this.locals.tallies = [];
+          yield tallyModel.get({
+            owner: session.uid,
+            year: now.getFullYear(),
+            month: now.getMonth() + 1
           });
-          yield userModel.get();
           yield next;
           yield this.render('category');
         }

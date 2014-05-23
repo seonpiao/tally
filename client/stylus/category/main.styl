@@ -1,11 +1,21 @@
 @import '../common/base'
 @import 'modules'
-.categories
-  text-align:center
-  padding:50px 0
-  .item
-    display:inline-block
-    padding:10px 20px
-    border:1px solid lighten($themeColor,20%)
-    margin:10px
-    border-radius(3px)
+
+.chart
+  padding-top:40px
+  position:relative
+  .desc
+    position:absolute
+    top:50px
+    right:0
+    width:120px
+    .category
+      .color
+        display:inline-block
+        width:20px
+        height:20px
+        vertical-align:middle
+        margin-right:8px
+      .name
+        font-size:14px
+        vertical-align:middle

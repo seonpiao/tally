@@ -141,6 +141,6 @@ html footer{background:#fff}
 .add_keyword select{font-size:14px;padding:8px;height:42px;vertical-align:top;margin-right:6px}
 .add_keyword .btn{text-align:center}
 .keywords{padding:10px 0;margin-bottom:10px;display:-webkit-inline-flex;-webkit-flex-flow:row wrap;}
-.keywords .item{-webkit-flex:auto;display:inline-block;padding:6px 8px;margin:5px;text-align:center;border:1px solid #b5d33a;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
+.keywords .item{-webkit-flex:auto;display:inline-block;padding:6px 8px;margin:5px;text-align:center;border:1px solid #b5d33a;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;font-size:20px}
 .keywords .plugin{-webkit-flex:auto;display:inline-block;padding:1px 8px;margin:5px;text-align:center;}
-.keywords .plugin a{font-size:24px}
+.keywords .plugin a{font-size:30px}
