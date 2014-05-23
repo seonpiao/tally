@@ -20,34 +20,10 @@ describe('cost model', function() {
           var date = new Date(parseInt(time));
           var year = date.getFullYear();
           var month = date.getMonth() + 1;
-          date = date.getDate();
-          years[year] = years[year] || {};
-          years[year].items = years[year].items || [];
-          years[year].months = years[year].months || {};
-          years[year].months[month] = years[year].months[month] || {};
-          years[year].months[month].items = years[year].months[month].items || [];
-          years[year].months[month].dates = years[year].months[month].dates || {};
-          years[year].months[month].dates[date] = years[year].months[month].dates[date] || {};
-          years[year].months[month].dates[date].items = years[year].months[month].dates[date].items || [];
-          years[year].items.push(id);
-          years[year].months[month].items.push(id);
-          years[year].months[month].dates[date].items.push(id);
-          console.log(JSON.stringify(years));
+          redis.rpush('tally:1:index:' + year, id);
+          redis.rpush('tally:1:index:' + year + ':' + month, id);
+          redis.rpush('tally:1:index:' + year + ':' + month + ':' + date, id);
         });
-        for (var year in years) {
-          var ids = years[year].items.join(',');
-          redis.set('tally:1:index:' + year, ids, function(err, reply) {});
-          var months = years[year].months;
-          for (var month in months) {
-            var ids = months[month].items.join(',');
-            redis.set('tally:1:index:' + year + ":" + month, ids, function(err, reply) {});
-            var dates = months[month].dates;
-            for (var date in dates) {
-              var ids = dates[date].items.join(',');
-              redis.set('tally:1:index:' + year + ":" + month + ":" + date, ids, function(err, reply) {});
-            }
-          }
-        }
       }
       done();
     })
