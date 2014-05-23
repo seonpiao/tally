@@ -142,7 +142,7 @@ html footer{background:#fff}
 .summary .num small{font-size:14px}
 .summary .category{position:absolute;right:0;top:16px;font-size:20px;color:#777}
 .costs{padding-bottom:10px;}
-.costs .item{display:block;padding:10px;border-bottom:1px solid #b5d33a;margin:10px 0;position:relative;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#777;}
+.costs .item{display:block;padding:10px;border-bottom:1px solid #d1e384;margin:10px 0;position:relative;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#777;}
 .costs .item strong{font-size:30px;display:inline-block;width:140px;color:#f3a036;}
 .costs .item strong .unit{font-size:16px}
 .costs .item strong .time{font-size:12px;display:block;color:#777;font-weight:normal}
