@@ -13,24 +13,6 @@ block append content
       li.item
         a(href="/cost/" + item.keyword + '/' + item.category)= item.keyword
   include ../client/modules/add_keyword/index
-  script.
-    var $select = document.getElementById('category');
-    $select.onchange = function(){
-      if($select.value === '新分类'){
-        setTimeout(function(){
-          var category = prompt('输入分类名').trim();
-          if(category){
-            var option = document.createElement('option');
-            option.innerText = category;
-            option.value = category;
-            setTimeout(function(){
-              $select.appendChild(option);
-              $select.selectedIndex = $select.options.length - 1;
-            },0);
-          }
-        });
-      }
-    };
 
 block append footer
   script(type='text/javascript',src="/js/common/main.js")

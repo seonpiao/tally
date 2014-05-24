@@ -1,26 +1,38 @@
 .add_keyword
-  display:none
+  // display:none
   position:relative
   margin:0 5px
-  .icon-plus
-    vertical-align:middle
-    font-size:26px
-    line-height:34px
-  input
-    width:86px
-    margin-right:6px
-    font-size:14px
-    padding:7px 9px
-    line-height:24px
-    border:1px solid rgba(black,.4)
-    border-radius(3px)
-    color:rgba(0,0,0,.8)
-    outline:0
-  select
-    font-size:14px
-    padding:8px
-    height:42px
-    vertical-align:top
-    margin-right:6px
-  .btn
-    text-align:center
+  .row
+    padding:5px 0
+    .icon-plus
+      vertical-align:middle
+      font-size:26px
+      line-height:34px
+    input
+      width:100px
+      margin-right:6px
+      font-size:14px
+      padding:7px 9px
+      line-height:24px
+      border:1px solid rgba(black,.4)
+      border-radius(3px)
+      color:rgba(0,0,0,.8)
+      outline:0
+      &.error
+        border-color:$errorBorder
+    select
+      width:120px
+      font-size:14px
+      height:42px
+      margin-right:6px
+      outline:0
+      &.error
+        border-color:$errorBorder
+    .btn
+      text-align:center
+      width:104px
+    .tip
+      font-size:14px
+      color:darken($grayLight,20%)
+      &.error
+        color:$errorText
