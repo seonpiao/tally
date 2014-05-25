@@ -774,7 +774,7 @@ define("modules/del_category/view", [
       if (isDel) {
         this.model.fetch({
           success: function() {
-            // location.reload();
+            location.reload();
           }
         });
       }
