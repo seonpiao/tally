@@ -1,0 +1,6 @@
+{
+  "name": "del_category",
+  "js": "index.js",
+  "stylesheet": "index.styl",
+  "template": "index.jade"
+}

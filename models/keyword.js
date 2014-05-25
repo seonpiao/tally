@@ -54,11 +54,21 @@ var model = {
     var owner = options.owner;
     var keyword = options.keyword;
     var category = options.category;
-    var show = options.show === 1 ? 1 : 0;
     var key = util.format('keyword:%s', owner);
     return function(done) {
       var self = this;
       redis.hset(key, keyword, keyword + '|' + category + '|' + show, function() {
+        done.apply(self, arguments);
+      });
+    }
+  },
+  remove: function(options) {
+    var owner = options.owner;
+    var keyword = options.keyword;
+    var key = util.format('keyword:%s', owner);
+    return function(done) {
+      var self = this;
+      redis.hdel(key, keyword, function(err, reply) {
         done.apply(self, arguments);
       });
     }

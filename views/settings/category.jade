@@ -1,0 +1,20 @@
+extends ../layout
+block append head
+  title 记账
+  link(type="text/css",rel="stylesheet",href="/css/settings/category.css")
+
+block append header
+  include ../../client/modules/headbar/index
+
+block append content
+  ul.categories
+    for item in categories
+      li.item
+        strong= decodeURIComponent(item.category)
+        span.del
+          include ../../client/modules/del_category/index
+          +delCategory(item.category)
+
+block append footer
+  script(type='text/javascript',src="/js/common/main.js")
+  script(type='text/javascript',src="/js/settings/category/main.js")

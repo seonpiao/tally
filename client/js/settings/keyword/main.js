@@ -1,0 +1,1 @@
+require(['js/settings/keyword/modules'], function() {});

@@ -50,7 +50,18 @@ var model = {
         done.apply(self, arguments);
       });
     }
-  }
+  },
+  remove: function(options) {
+    var owner = options.owner;
+    var category = options.category;
+    var key = util.format('category:%s', owner);
+    return function(done) {
+      var self = this;
+      redis.hdel(key, category, function(err, reply) {
+        done.apply(self, arguments);
+      });
+    }
+  },
 };
 
 module.exports = model;

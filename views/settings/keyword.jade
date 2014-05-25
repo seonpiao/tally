@@ -1,0 +1,20 @@
+extends ../layout
+block append head
+  title 记账
+  link(type="text/css",rel="stylesheet",href="/css/settings/keyword.css")
+
+block append header
+  include ../../client/modules/headbar/index
+
+block append content
+  ul.keywords
+    for item in keywords
+      li.item
+        strong= item.keyword
+        span.del
+          include ../../client/modules/del_keyword/index
+          +delKeyword(item.keyword)
+
+block append footer
+  script(type='text/javascript',src="/js/common/main.js")
+  script(type='text/javascript',src="/js/settings/keyword/main.js")

@@ -30,6 +30,18 @@ module.exports = function(grunt) {
       list: {
         src: ['client/stylus/list/main.styl'],
         dest: 'dist/css/list.css'
+      },
+      settings: {
+        src: ['client/stylus/settings/main.styl'],
+        dest: 'dist/css/settings.css'
+      },
+      settings_keyword: {
+        src: ['client/stylus/settings/keyword/main.styl'],
+        dest: 'dist/css/settings/keyword.css'
+      },
+      settings_category: {
+        src: ['client/stylus/settings/category/main.styl'],
+        dest: 'dist/css/settings/category.css'
       }
     },
 
@@ -145,6 +157,39 @@ module.exports = function(grunt) {
           loader: "js/libs/oz.js",
           disableAutoSuffix: true
         }
+      },
+      settings: {
+        src: 'client/js/settings/main.js',
+        saveConfig: false,
+        debounceDelay: 3000,
+        config: {
+          baseUrl: "client/",
+          distUrl: "dist/",
+          loader: "js/libs/oz.js",
+          disableAutoSuffix: true
+        }
+      },
+      settings_keyword: {
+        src: 'client/js/settings/keyword/main.js',
+        saveConfig: false,
+        debounceDelay: 3000,
+        config: {
+          baseUrl: "client/",
+          distUrl: "dist/",
+          loader: "js/libs/oz.js",
+          disableAutoSuffix: true
+        }
+      },
+      settings_category: {
+        src: 'client/js/settings/category/main.js',
+        saveConfig: false,
+        debounceDelay: 3000,
+        config: {
+          baseUrl: "client/",
+          distUrl: "dist/",
+          loader: "js/libs/oz.js",
+          disableAutoSuffix: true
+        }
       }
     },
     genstatic: {
@@ -218,6 +263,42 @@ module.exports = function(grunt) {
         dest: {
           js: 'client/js/list/modules.js',
           stylesheet: 'client/stylus/list/modules.styl'
+        }
+      },
+      settings: {
+        file: 'views/settings.jade',
+        modulePath: 'client/modules',
+        prefix: {
+          js: 'modules',
+          stylesheet: '../../modules'
+        },
+        dest: {
+          js: 'client/js/settings/modules.js',
+          stylesheet: 'client/stylus/settings/modules.styl'
+        }
+      },
+      settings_keyword: {
+        file: 'views/settings/keyword.jade',
+        modulePath: 'client/modules',
+        prefix: {
+          js: 'modules',
+          stylesheet: '../../modules'
+        },
+        dest: {
+          js: 'client/js/settings/keyword/modules.js',
+          stylesheet: 'client/stylus/settings/keyword/modules.styl'
+        }
+      },
+      settings_category: {
+        file: 'views/settings/category.jade',
+        modulePath: 'client/modules',
+        prefix: {
+          js: 'modules',
+          stylesheet: '../../modules'
+        },
+        dest: {
+          js: 'client/js/settings/category/modules.js',
+          stylesheet: 'client/stylus/settings/category/modules.styl'
         }
       }
       // user: {

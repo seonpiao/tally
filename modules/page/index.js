@@ -145,6 +145,70 @@ module.exports = {
           yield this.render('list');
         }
       }),
+      app.route('/settings').get(function * (next) {
+        var session = yield this.session;
+        yield userModel.check(session);
+        if (this.status !== 301) {
+          yield next;
+          yield this.render('settings');
+        }
+      }),
+      app.route('/settings/category').get(function * (next) {
+        var session = yield this.session;
+        yield userModel.check(session);
+        if (this.status !== 301) {
+          var options = {
+            owner: session.uid
+          };
+          yield categoryModel.get(options);
+          yield userModel.get();
+          yield next;
+          yield this.render('settings/category');
+        }
+      }),
+      app.route('/settings/keyword').get(function * (next) {
+        var session = yield this.session;
+        yield userModel.check(session);
+        if (this.status !== 301) {
+          var options = {
+            owner: session.uid
+          };
+          yield keywordModel.get(options);
+          yield userModel.get();
+          yield next;
+          yield this.render('settings/keyword');
+        }
+      }),
+      app.route('/settings/keyword/del/:keyword').get(function * (next) {
+        var session = yield this.session;
+        yield userModel.check(session);
+        if (this.status !== 301) {
+          var keyword = decodeURIComponent(this.request.params.keyword);
+          yield keywordModel.remove({
+            owner: session.uid,
+            keyword: keyword
+          });
+          this.body = {
+            ret_code: 0
+          }
+          yield next;
+        }
+      }),
+      app.route('/settings/category/del/:category').get(function * (next) {
+        var session = yield this.session;
+        yield userModel.check(session);
+        if (this.status !== 301) {
+          var category = (this.request.params.category);
+          yield categoryModel.remove({
+            owner: session.uid,
+            category: category
+          });
+          this.body = {
+            ret_code: 0
+          }
+          yield next;
+        }
+      }),
       app.route('/tally/del/:id').get(function * (next) {
         var session = yield this.session;
         yield userModel.check(session);
