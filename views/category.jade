@@ -9,12 +9,20 @@ block append header
 block append content
   - var chartData = {};
   - var colors = [];
-  - colors.push('rgb(184, 178, 43)');
-  - colors.push('rgb(125, 165, 40)');
-  - colors.push('rgb(176, 213, 112)');
-  - colors.push('rgb(57, 167, 123)');
-  - colors.push('rgb(146, 141, 35)');
-  - colors.push('rgb(82, 196, 61)');
+  - colors.push('#e3fda4');
+  - colors.push('#c9f957');
+  - colors.push('#a2d04c');
+  - colors.push('#6bc11e');
+  - colors.push('#39d12e');
+  - colors.push('#70b330');
+  - colors.push('#67a131');
+  - colors.push('#3b942a');
+  - colors.push('#22920c');
+  - colors.push('#059221');
+  - colors.push('#1c6200');
+  - colors.push('#0c5a1c');
+  - colors.push('#02400d');
+  - colors.push('#164920');
   - var colorIndex = 0;
   for item in tallies
     - var categoryName = decodeURIComponent(item.category);
