@@ -9,9 +9,9 @@ block append content
       li
         a.btn(href="/keyword?" + Date.now()) 记一笔
       li
-        a(href="/list") 查看明细
+        a(href="/list" + Date.now()) 查看明细
   div.tools
-    a.icon.icon-cog(href="/settings/")
+    a.icon.icon-cog(href="/settings/" + Date.now())
 
 block append footer
   script(type='text/javascript',src="/js/index/main.js")

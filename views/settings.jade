@@ -10,9 +10,9 @@ block append content
   div.panel
     ul
       li
-        a(href="keyword") 消费项目管理
+        a(href="keyword?" + Date.now()) 消费项目管理
       li
-        a(href="category") 消费类别管理
+        a(href="category?" + Date.now()) 消费类别管理
 
 block append footer
   script(type='text/javascript',src="/js/settings/main.js")

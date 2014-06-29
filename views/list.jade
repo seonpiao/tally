@@ -14,7 +14,7 @@ block append content
     |总计：
     strong.num= (total.toString().indexOf('.') === -1 ? total : total.toFixed(2))
       small 元
-    a.category.icon-chart(href="/category")
+    a.category.icon-chart(href="/category?" + Date.now())
   ul.costs
     - tallies = tallies.reverse();
     for item in tallies

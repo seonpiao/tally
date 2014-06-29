@@ -11,7 +11,7 @@ block append content
     - keywords.sort(function(a,b){return b.count - a.count})
     for item in keywords
       li.item
-        a(href="/cost/" + item.keyword + '/' + item.category)= item.keyword
+        a(href="/cost/" + item.keyword + '/' + item.category + '?' + Date.now())= item.keyword
   include ../client/modules/add_keyword/index
 
 block append footer
